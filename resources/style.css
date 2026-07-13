@@ -1,0 +1,404 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Cyan Memories — "Johnny Cyan" Theme
+   Accent      : #15F4EE  (glowing cyan)
+   Happy Navy  : #1E2E3E  (main background)
+   Avion Teal  : #2A4A5A  (sidebars / toolbars)
+   List bg     : #263a4d
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* ── Global reset ─────────────────────────────────────────────────────────── */
+* {
+    border-radius: 0;
+}
+
+window,
+.background {
+    background-color: #1E2E3E;
+    color: #15F4EE;
+    text-shadow: 0 0 8px #15F4EE;
+    font-family: "JetBrains Mono", "Fira Code", "Terminus", "Monospace", monospace;
+    font-size: 13px;
+}
+
+/* ── Header bar ───────────────────────────────────────────────────────────── */
+headerbar {
+    background-color: #2A4A5A;
+    border-bottom: 1px solid #15F4EE;
+    color: #15F4EE;
+    padding: 4px 8px;
+    min-height: 38px;
+    box-shadow: 0 1px 8px alpha(#15F4EE, 0.20);
+}
+
+headerbar .title {
+    color: #15F4EE;
+    text-shadow: 0 0 8px #15F4EE;
+    font-weight: bold;
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+headerbar button {
+    background-color: transparent;
+    border: 1px solid alpha(#15F4EE, 0.3);
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    padding: 4px 12px;
+    min-height: 28px;
+}
+
+headerbar button:hover {
+    border-color: #15F4EE;
+    background-color: alpha(#15F4EE, 0.10);
+    box-shadow: 0 0 8px alpha(#15F4EE, 0.3);
+}
+
+headerbar button:active {
+    background-color: alpha(#15F4EE, 0.20);
+}
+
+/* ── Paned separator ──────────────────────────────────────────────────────── */
+paned > separator {
+    background-color: #2A4A5A;
+    min-width: 1px;
+    min-height: 1px;
+}
+
+paned > separator:hover {
+    background-color: #15F4EE;
+    opacity: 0.5;
+}
+
+/* ── Left sidebar ─────────────────────────────────────────────────────────── */
+.sidebar {
+    background-color: #2A4A5A;
+    border-right: 1px solid alpha(#15F4EE, 0.25);
+    padding: 0;
+}
+
+.sidebar-section-label {
+    color: #15F4EE;
+    text-shadow: 0 0 8px #15F4EE;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 14px 4px;
+    opacity: 0.85;
+}
+
+.card-path-label {
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    padding: 2px 14px 8px;
+}
+
+.card-usage-label {
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-size: 10px;
+    font-family: "JetBrains Mono", monospace;
+    padding: 2px 14px 6px;
+    opacity: 0.7;
+}
+
+/* ── Open card drop area ──────────────────────────────────────────────────── */
+.open-card-area {
+    background-color: alpha(#15F4EE, 0.04);
+    border: 1px dashed alpha(#15F4EE, 0.35);
+    margin: 10px;
+    padding: 14px;
+}
+
+.open-card-area:hover {
+    border-color: #15F4EE;
+    background-color: alpha(#15F4EE, 0.08);
+}
+
+.open-card-area label {
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-size: 11px;
+    letter-spacing: 1px;
+    opacity: 0.65;
+}
+
+/* ── Progress bar (card capacity) ─────────────────────────────────────────── */
+progressbar {
+    min-height: 5px;
+    margin: 0 14px 4px;
+}
+
+progressbar trough {
+    background-color: alpha(#15F4EE, 0.12);
+    border: none;
+}
+
+progressbar progress {
+    background-color: #15F4EE;
+    box-shadow: 0 0 6px alpha(#15F4EE, 0.6);
+}
+
+/* ── Search entry ─────────────────────────────────────────────────────────── */
+.save-search {
+    background-color: alpha(#15F4EE, 0.05);
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    border: 1px solid alpha(#15F4EE, 0.3);
+    font-family: "JetBrains Mono", monospace;
+    font-size: 12px;
+    padding: 6px 10px;
+    margin: 6px 8px 4px;
+}
+
+.save-search:focus {
+    border-color: #15F4EE;
+    box-shadow: 0 0 0 1px alpha(#15F4EE, 0.3);
+}
+
+/* ── Main list view ───────────────────────────────────────────────────────── */
+listview {
+    background-color: #263a4d;
+}
+
+listview > row {
+    background-color: transparent;
+    padding: 0;
+    border-bottom: 1px solid alpha(#15F4EE, 0.08);
+    transition: background-color 80ms ease;
+}
+
+listview > row:hover {
+    background-color: alpha(#15F4EE, 0.07);
+}
+
+listview > row:selected {
+    background-color: rgba(21, 244, 238, 0.6);
+    border: 2px solid #15F4EE;
+    box-shadow: inset 0 0 14px alpha(#15F4EE, 0.25),
+                0 0 8px alpha(#15F4EE, 0.35);
+}
+
+/* ── Save entry row ───────────────────────────────────────────────────────── */
+.save-entry-row {
+    padding: 10px 14px;
+}
+
+.save-icon-placeholder {
+    background-color: alpha(#15F4EE, 0.06);
+    border: 1px solid alpha(#15F4EE, 0.2);
+    min-width: 36px;
+    min-height: 36px;
+}
+
+.save-entry-title {
+    color: #15F4EE;
+    text-shadow: 0 0 8px #15F4EE;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.save-entry-gameid {
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    opacity: 0.8;
+}
+
+.save-entry-meta {
+    color: #15F4EE;
+    text-shadow: 0 0 4px #15F4EE;
+    font-size: 10px;
+    opacity: 0.55;
+}
+
+/* ── Details panel ────────────────────────────────────────────────────────── */
+.details-panel {
+    background-color: #2A4A5A;
+    border-left: 1px solid alpha(#15F4EE, 0.25);
+    padding: 16px 14px;
+    min-width: 240px;
+}
+
+.details-section-label {
+    color: #15F4EE;
+    text-shadow: 0 0 8px #15F4EE;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 16px;
+    margin-bottom: 6px;
+    opacity: 0.85;
+}
+
+.details-key {
+    color: #15F4EE;
+    text-shadow: 0 0 4px #15F4EE;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    padding-right: 10px;
+    opacity: 0.6;
+}
+
+.details-value {
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+.details-icon-area {
+    background-color: alpha(#15F4EE, 0.05);
+    border: 1px solid alpha(#15F4EE, 0.25);
+    min-width: 64px;
+    min-height: 64px;
+    margin-bottom: 14px;
+}
+
+.no-selection-label {
+    color: #15F4EE;
+    font-size: 11px;
+    font-style: italic;
+    opacity: 0.4;
+}
+
+/* ── Action buttons ───────────────────────────────────────────────────────── */
+button {
+    background-color: alpha(#15F4EE, 0.05);
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    border: 1px solid alpha(#15F4EE, 0.25);
+    padding: 8px 0;
+    font-size: 11px;
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 120ms ease;
+    min-height: 32px;
+}
+
+button:hover {
+    border-color: #15F4EE;
+    background-color: alpha(#15F4EE, 0.12);
+    box-shadow: 0 0 8px alpha(#15F4EE, 0.3);
+}
+
+button:active {
+    background-color: alpha(#15F4EE, 0.22);
+}
+
+button:disabled {
+    color: alpha(#15F4EE, 0.25);
+    border-color: alpha(#15F4EE, 0.1);
+    background-color: transparent;
+    text-shadow: none;
+}
+
+.btn-import {
+    border-color: alpha(#15F4EE, 0.5);
+    color: #15F4EE;
+}
+
+.btn-import:hover {
+    background-color: alpha(#15F4EE, 0.12);
+    border-color: #15F4EE;
+    box-shadow: 0 0 12px alpha(#15F4EE, 0.35);
+}
+
+.btn-export {
+    border-color: alpha(#15F4EE, 0.4);
+    color: #15F4EE;
+}
+
+.btn-export:hover {
+    background-color: alpha(#15F4EE, 0.12);
+    border-color: #15F4EE;
+    box-shadow: 0 0 12px alpha(#15F4EE, 0.3);
+}
+
+.btn-delete {
+    border-color: alpha(#FF4444, 0.5);
+    color: #FF4444;
+    text-shadow: 0 0 6px #FF4444;
+}
+
+.btn-delete:hover {
+    background-color: alpha(#FF4444, 0.10);
+    border-color: #FF4444;
+    box-shadow: 0 0 10px alpha(#FF4444, 0.3);
+}
+
+/* ── Scrollbars ───────────────────────────────────────────────────────────── */
+scrollbar {
+    background-color: transparent;
+    min-width: 6px;
+    min-height: 6px;
+}
+
+scrollbar slider {
+    background-color: alpha(#15F4EE, 0.25);
+    min-width: 4px;
+    min-height: 4px;
+}
+
+scrollbar slider:hover {
+    background-color: #15F4EE;
+    opacity: 0.7;
+}
+
+scrollbar.vertical   { border-left:  1px solid alpha(#15F4EE, 0.1); }
+scrollbar.horizontal { border-top:   1px solid alpha(#15F4EE, 0.1); }
+
+/* ── Status bar ───────────────────────────────────────────────────────────── */
+.statusbar {
+    background-color: #1E2E3E;
+    border-top: 1px solid alpha(#15F4EE, 0.3);
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding: 4px 14px;
+    opacity: 0.9;
+}
+
+/* ── Separators ───────────────────────────────────────────────────────────── */
+separator {
+    background-color: alpha(#15F4EE, 0.15);
+    min-height: 1px;
+    min-width: 1px;
+}
+
+/* ── Text entries ─────────────────────────────────────────────────────────── */
+entry {
+    background-color: alpha(#15F4EE, 0.05);
+    color: #15F4EE;
+    text-shadow: 0 0 6px #15F4EE;
+    border: 1px solid alpha(#15F4EE, 0.3);
+    padding: 6px 10px;
+    font-family: "JetBrains Mono", monospace;
+}
+
+entry:focus {
+    border-color: #15F4EE;
+    box-shadow: 0 0 0 1px alpha(#15F4EE, 0.3);
+}
+
+/* ── Utility classes ──────────────────────────────────────────────────────── */
+.accent1    { color: #15F4EE; text-shadow: 0 0 8px #15F4EE; }
+.accent2    { color: #15F4EE; text-shadow: 0 0 8px #15F4EE; }
+.dim        { color: #15F4EE; opacity: 0.4; }
+.mono       { font-family: "JetBrains Mono", monospace; }
+.neon-title {
+    color: #15F4EE;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px #15F4EE, 0 0 20px alpha(#15F4EE, 0.5);
+}

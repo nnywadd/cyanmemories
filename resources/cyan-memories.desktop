@@ -1,0 +1,12 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Cyan Memories
+GenericName=PS1/PS2 Memory Card Editor
+Comment=Edit and manage PS1 and PS2 memory card saves
+Exec=cyan-memories
+Icon=drive-removable-media
+Terminal=false
+Categories=Utility;Game;
+Keywords=PS1;PS2;PlayStation;memory card;save;
+StartupNotify=true
